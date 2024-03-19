@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* form{
+    background-color: red;
+} */
+/* input{
+    border: 1px solid red;
+} */
+/* .name{
+    border: 1px solid blue;
+}
+.phone{
+    border: 1px solid green;
+} */
+input[type="text"]{
+    border: 1px solid blue;
+}
+input[type="number"]{
+    border: 1px solid green;
+}
+button[type="submit"]{
+    border: none;
+    background-color: blue;
+    color: white;
+}
+button[type="reset"]{
+    border: none;
+    background-color: red;
+    color: white;
+}

@@ -1,0 +1,86 @@
+/* Inline and Block */
+
+.block{
+    background-color: red;
+    /* display: inline; */
+    /* height: 20px; */
+    height: 50px;
+    width: 40%;
+}
+.inline{
+    /* display: block; */
+    background-color: blue;
+    height: 60px;
+    width: 40%;
+}
+.inline-block{
+    background-color: green;
+    display: inline-block;
+    height: 30px;
+    width: 600px;
+}
+
+/* Float */
+.float{
+    background-color: brown;
+    /* display: inline; */
+    float: left;
+}
+
+/* Fonts */
+.font{
+    background-color: wheat;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 100%;
+    font-weight: 400;
+    font-style: italic;
+    text-decoration: underline;
+    text-transform:capitalize;
+    text-align: justify;
+}
+
+/* Links */
+a{
+    color: red;
+    text-decoration: none;
+}
+a:hover{
+  color: black;  
+}
+a:visited{
+    color: green;
+}
+a:active{
+    color: violet;
+}
+
+/* Tables */
+table{
+    border-collapse: separate;
+}
+td,th,table{
+    border: 1px solid;
+}
+tr{
+    height: 40px;
+}
+tr:nth-child(2n){
+    background-color: greenyellow;
+}
+tr:nth-child(2n-1){
+    background-color: blue;
+}
+
+/* Lists */
+ul{
+    list-style-type: square;
+    list-style-position: outside;
+    list-style-image: url("");
+}
+
+
+
+
+
+
+

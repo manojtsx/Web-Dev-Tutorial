@@ -1,0 +1,25 @@
+.parent{
+    background-color: red;
+    width: 700px;
+    height: 700px;
+    display: grid;
+    place-items: center;
+    margin: 10px;
+}
+.child{
+    background-color: blue;
+    width: 150px;
+    height: 150px;
+    /* border-width: 10px 5px 3px 4px;
+    border-style: solid;
+    border-color: black; */
+    /* border: 5px solid green;
+    padding: 10px 5px;
+    outline: 3px solid black;
+    margin: 10px; */
+    
+    position: absolute;
+    top: 0;
+    right: 0;
+}   
+

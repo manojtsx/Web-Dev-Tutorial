@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: linear-gradient(right,blue, violet);
+}
+body > div{
+    background-image: linear-gradient(to bottom right, blue, violet);
+}
+form > div{
+    display: flex;
+    flex-direction: column;  
+}
+form{
+    display: grid;
+    gap : 10px;
+    grid-template-columns: auto auto;
+
+    padding: 15px;
+}
+form > div{
+    gap: 5px;
+}
+form > div > label{
+    font-size: 20px;
+}
+form > div > input[type="text"],
+form > div > input[type="password"]{
+    outline: none;
+    height: 30px;
+    border: 1px solid whitesmoke;
+}
+input::placeholder{
+    color: #a49292;
+    padding: 0 5px;
+}
+form > div.gender {
+    display: flex;
+}
+button{
+    height: 40px;
+    width: 100%;
+    background-color: blue;
+    color: white;
+    border: 1px solid blue;
+}
+button:hover{
+    color: blue;
+    background-color: white;
+}

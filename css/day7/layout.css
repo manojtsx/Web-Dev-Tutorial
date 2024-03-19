@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    background-color: blue;
+    color: white;
+    height: 40px;
+    display: grid;
+    place-items: center;
+}
+section{
+    display: flex;
+    height: calc(100vh - 40px - 40px);
+}
+footer{
+    width: 100vw;
+    height: 40px;
+    background-color: springgreen;
+    display: grid;
+    place-items: center;   
+    position: absolute;
+    bottom: 0;
+}
+.left-sidebar{
+    background-color: brown;
+    width: 25%;
+}
+.right-sidebar{
+    background-color: brown;
+    width: 25%;
+}
+.main-content{
+    background-color: yellow;
+    width: 50%;
+}

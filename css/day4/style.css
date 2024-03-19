@@ -1,0 +1,37 @@
+.max-min{
+    /* background-color: red; */
+    /* max-width: 100px; */
+    /* z-index: 1; */
+}
+.zIndex{
+    /* background-color: blue; */
+    opacity: 1;
+    /* overflow-y: scroll; */
+    /* max-width: 50px; */
+    /* position: absolute; */
+    /* z-index: 0; */
+}
+/* div:nth-child(2n+1){
+    color: red;
+} */
+ul:nth-last-child(1){
+    color: blue;
+}
+a:visited{
+    color: red;
+}
+
+div{
+    color: white;
+    background-color: red;
+    height: 100px;
+    width: 100px;
+}
+div::before{
+    content: "Before Content";
+    background-color: blue;
+}
+div::after{
+    content: "After Content";
+    background-color:blue ;
+}

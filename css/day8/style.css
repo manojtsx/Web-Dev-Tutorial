@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Flex CSS */
+.flex-container{
+    height: 400px;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.item{
+    width: 200px;
+    height: 200px;
+}
+.item1{
+    /* order: 1; */
+    /* align-self: flex-start; */
+    background-color: green;
+}
+.item2{
+    background-color: brown;
+}
+.item3{
+    /* order: -2; */
+    background-color: yellow;
+}
+.item4{
+    background-color: blue;
+}
+.item5{
+    align-self: flex-end;
+    background-color:red;
+}
+
+/* Grid CSS */
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    row-gap: 30px;
+    place-items: center;
+}
+.item1{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}

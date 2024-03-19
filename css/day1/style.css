@@ -1,0 +1,25 @@
+/* #par12{
+    color: red;
+} */
+/* .paragraph{
+    color : yellow;
+} */
+
+h1 {
+  height: 100vh;
+  /* color: red; Color name value */
+  /* color: #273973;  HEX color code */
+  /* color: rgb(150,100,200); RGB value */
+  /* color: rgba(150, 100, 200, 1); RGBBA value */
+  /* color: hsl(0, 32%, 46%); HSL value */
+  /* background-color: red; */
+  /* background-image: url("https://global.canon/en/imaging/picturestyle/editor/images/b1-e-img-1.jpg"); */
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+  /* background-position: top center; */
+  /* background-attachment: fixed; */
+  /* background: url("https://global.canon/en/imaging/picturestyle/editor/images/b1-e-img-1.jpg") no-repeat top center fixed; */
+}
+div{
+   =    
+}

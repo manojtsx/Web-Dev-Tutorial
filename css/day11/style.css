@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.responsive{
+    height: 50px;
+    background-color: blue;
+}
+@media screen and (min-width : 640px) {
+    .responsive{
+        background-color: violet;
+    }
+}
+@media screen and (min-width : 768px) {
+    .responsive{
+        background-color: blueviolet;
+    }
+}
+@media screen and (min-width : 1024px) {
+    .responsive{
+        background-color: goldenrod;
+    }
+}
+@media screen and (min-width : 1280px) {
+    .responsive{
+        background-color: yellow;
+    }
+}
