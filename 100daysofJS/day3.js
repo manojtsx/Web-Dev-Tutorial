@@ -5,3 +5,14 @@ Constraints:
 2. The function should handle both lowercase and uppercase characters.
 3. The character parameter can be any printable ASCII character (the function should accept any character that is part of ASCII character set and is printable).
 */
+
+function countChar(str, char){
+    let count = 0;
+    for(let letter of str){
+        if(letter.toLowerCase() === char.toLowerCase()) count++;
+    }
+    return count;
+}
+
+const result = countChar("MissIssippi","I");
+console.log(result);
