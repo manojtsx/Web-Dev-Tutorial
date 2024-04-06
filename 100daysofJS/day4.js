@@ -11,3 +11,11 @@ Constraints:
 3. If all three sides are of different lengths, return "scalene"
 
 */
+
+function checkTriangleType(a,b,c,){
+    if(a==b && b===c) return "equilateral";
+    else if(a===b || a===c || b===c) return "isosceles";
+    else return "scalene";
+}
+let result = checkTriangleType(1,2,2);
+console.log(result);
