@@ -56,9 +56,9 @@ header .content p{
     justify-content: flex-start ;
     align-items: center;
     gap: 10px;
-    height: calc(100vh - 90px);
+    height: calc(100vh - 150px);
     margin-top: 50px;
-    padding: 0 40px;
+    padding: 0 20px;
     overflow-x: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -102,5 +102,75 @@ header .content button a{
         margin: 0 10px;
         flex-direction: column;
         height: auto;
+    }
+}
+
+/* About */
+.about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 50px 0;
+}
+.about h2{
+    font-size: xx-large;
+    border-bottom: 3px solid white;
+    cursor: pointer;
+}
+.about h2:hover{
+    border-bottom: 3px solid blue;
+}
+.artist-detail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    padding:  0 140px;
+}
+.artist-image{
+    width: 300px;
+    height: 300px;
+    border-radius: 61% 25% 25% 60% / 60% 18% 61% 25%;
+    overflow: hidden;
+}
+.artist-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.artist-description{
+    text-align: left;
+    width: 50%;
+}
+.artist-description p{
+    font-size: 18px;
+    color: var(--quinary-color);
+}
+.artist-description button{
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    background-color: var(--quinary-color);
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.artist-description button:hover{
+    background-color: var(--tertiary-color);
+}
+.artist-description button a{
+    text-decoration: none;
+    color: white;
+}
+@media screen and (max-width: 769px){
+    .artist-detail{
+        flex-direction: column;
+        gap:30px;
+        padding: 0 10px;
+    }
+    .artist-description{
+        width: 90%;
     }
 }

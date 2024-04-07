@@ -9,3 +9,19 @@ Constraints:
 3. The original array should remain unchanged.
 4. You are not allowed to use the build-in sort() method.
 */
+
+function sortAscending(arr){
+    let newArr = arr;
+    for(let i = 0 ; i < newArr.length ; i++){
+        for(let j = i; j<= newArr.length ; j++){
+            if(newArr[i] > newArr[j]){
+                temp = newArr[i];
+                newArr[i] = newArr[j];
+                newArr[j] = temp;
+            }
+        }
+    }
+    return newArr;
+}
+let result = sortAscending([3,2,6,4,1,9,8]);
+console.log(result);
