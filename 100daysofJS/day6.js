@@ -11,3 +11,11 @@ Constraints:
 4. The function should return true if the input string is a palindrome and false otherwise.
 
 */
+function isPalindrome(str) {
+  const regex = /[A-Za-z0-9]/g;
+  const processedStr = str.toLowerCase().match(regex).join("");
+  const reversedStr = processedStr.split("").reverse().join("");
+  return processedStr === reversedStr;
+}
+const result = isPalindrome("A man, a plan, a canal, Panama");
+console.log(result);
