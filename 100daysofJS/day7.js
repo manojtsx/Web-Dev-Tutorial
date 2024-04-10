@@ -5,3 +5,14 @@ console.log(findMax([1,5,3,9,2])); Output: 9
 console.log(findMax([-10,-5,-3,-9,-2])); Output: -2
 console.log(findMax([5])); Output: 5
 */
+function findMax(arr){
+    let max = Number.NEGATIVE_INFINITY;
+    for(let number of arr){
+        if(number > max){
+            max = number;
+        }
+    }
+    return max;
+}
+const result = findMax([-10,-5,-3,-9,-2]);
+console.log(result);
