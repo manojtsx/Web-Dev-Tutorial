@@ -17,3 +17,16 @@ Note:
 The spread syntax ( ...) in JavaScript is used to expand an array into individual elements. In this function, ...arr is used to spread the elements of the input array arr.
 For example: if arr is [5,10,2,8] then ...arr expands to 5.10,2,8.
 */
+
+function findMin(arr){
+    if(arr.length === 0) return undefined;
+    let min = Number.POSITIVE_INFINITY;
+    for(let num of arr){
+        if(num < min){
+            min = num;
+        }
+    }
+    return min;
+}
+const result = findMin([5,10,2,8]);
+console.log(result); //OUTPUT: 2
