@@ -1,5 +1,5 @@
 /*
-Q. Write a functoin called isPowerOfTwo that takes an integer num as input and returns true if num is a power of two and false otherwise.
+Q. Write a function called isPowerOfTwo that takes an integer num as input and returns true if num is a power of two and false otherwise.
 Example usage: 
 console.log(isPowerOfTwo(8)) Output: true
 console.log(isPowerOfTwo(7)) Output: false
@@ -12,3 +12,8 @@ Notes:
 We can solve it using bitwise operator to but it your choice to do it and let me know in the comment section.
 
 */
+function isPowerOfTwo(num){
+    return false;
+}
+const result = isPowerOfTwo(8);
+console.log(result);
