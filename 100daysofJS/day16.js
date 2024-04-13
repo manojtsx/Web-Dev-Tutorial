@@ -28,5 +28,4 @@ function findMin(arr){
     }
     return min;
 }
-const result = findMin([5,10,2,8]);
-console.log(result); //OUTPUT: 2
+module.exports = findMin;

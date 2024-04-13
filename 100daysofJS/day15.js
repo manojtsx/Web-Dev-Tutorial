@@ -11,5 +11,4 @@ function sumOfSquares(arr){
     }
     return total;
 }
-const result = sumOfSquares([1,2,3]);
-console.log(result);
+module.exports = sumOfSquares;

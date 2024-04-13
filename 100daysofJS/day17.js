@@ -16,8 +16,6 @@ function toCamelCase(str) {
   }
   return camelCase;
 }
-const result = toCamelCase("HeLlo worLd thapa");
-console.log(result); //OUTPUT: helloWorldThapa
 
 function toSnakeCase(str) {
     const splittedWords = str.split(" ");
@@ -28,5 +26,4 @@ function toSnakeCase(str) {
     }
     return splittedWords.join("_");
 }
-const result1 = toSnakeCase("hello World");
-console.log(result1); //OUTPUT : hello_world
+module.exports = { toCamelCase, toSnakeCase}
