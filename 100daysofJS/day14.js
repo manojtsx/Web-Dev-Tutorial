@@ -13,7 +13,17 @@ We can solve it using bitwise operator to but it your choice to do it and let me
 
 */
 function isPowerOfTwo(num){
+    for(let i = 1 ; i < num ; i++){
+        if(2 * i === num) return true;
+    }
     return false;
 }
-const result = isPowerOfTwo(8);
+const result = isPowerOfTwo(7);
 console.log(result);
+
+// BITWISE OPERATOR
+function isPowerOfTwo(num){
+    return num > 0 && (num & (num - 1))===0;
+}
+const result1 = isPowerOfTwo(8);
+console.log(result1);
