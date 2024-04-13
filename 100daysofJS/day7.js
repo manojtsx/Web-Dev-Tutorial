@@ -8,11 +8,11 @@ console.log(findMax([5])); Output: 5
 function findMax(arr){
     let max = Number.NEGATIVE_INFINITY;
     for(let number of arr){
-        if(number > max){
-            max = number;
+        if(Number(number) > max){
+            max = Number(number);
         }
     }
     return max;
 }
-const result = findMax([-10,-5,-3,-9,-2]);
-console.log(result);
+
+module.exports = findMax;

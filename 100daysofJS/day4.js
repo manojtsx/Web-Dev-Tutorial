@@ -17,5 +17,5 @@ function checkTriangleType(a,b,c,){
     else if(a===b || a===c || b===c) return "isosceles";
     else return "scalene";
 }
-let result = checkTriangleType(1,2,2);
-console.log(result);
+
+module.exports = checkTriangleType;

@@ -13,6 +13,4 @@ function countChar(str, char){
     }
     return count;
 }
-
-const result = countChar("MissIssippi","I");
-console.log(result);
+module.exports = countChar;

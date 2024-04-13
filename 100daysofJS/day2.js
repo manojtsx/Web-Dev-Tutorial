@@ -22,6 +22,4 @@ function generateHash(str) {
 
   return hashTagWord;
 }
-
-let result = generateHash("Hello this is manoj");
-console.log(result);
+module.exports = generateHash;

@@ -17,5 +17,4 @@ function isPalindrome(str) {
   const reversedStr = processedStr.split("").reverse().join("");
   return processedStr === reversedStr;
 }
-const result = isPalindrome("A man, a plan, a canal, Panama");
-console.log(result);
+module.exports = isPalindrome;

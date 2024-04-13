@@ -23,5 +23,4 @@ function sortAscending(arr){
     }
     return newArr;
 }
-let result = sortAscending([3,2,6,4,1,9,8]);
-console.log(result);
+module.exports = sortAscending;

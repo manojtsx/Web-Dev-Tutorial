@@ -24,5 +24,5 @@ function findLongestWord(str) {
   });
   return longestWord;
 }
-let result = findLongestWord("Hello this is javascript programming language");
-console.log(result);
+
+module.exports = findLongestWord;
