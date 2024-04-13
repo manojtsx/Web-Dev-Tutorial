@@ -13,6 +13,9 @@ Constraints:
 */
 
 function countVowels(str){
+    if(str === ""){
+        return 0;
+    }
     let count = 0;
     const regex = new RegExp('[aeiouAEIOU]');
     for(let char of str){
@@ -22,5 +25,4 @@ function countVowels(str){
     }
     return count;
 }
-const result = countVowels("ThE quIck brOwn fOx");
-console.log(result); //OUTPUT: 5
+module.exports = countVowels;

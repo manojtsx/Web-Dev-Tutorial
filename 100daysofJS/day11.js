@@ -16,16 +16,14 @@ Homework:
 
 */
 // BY CONVERTING INTO STRING
-function sumOfDigits(num){
-    let splittedNum = num.toString().split("");
-    let sum = 0;
-    for(let number of splittedNum){
-        sum += Number(number);
-    }
-    return sum;
-}
-const result = sumOfDigits(123456);
-console.log(result);
+// function sumOfDigits(num){
+//     let splittedNum = num.toString().split("");
+//     let sum = 0;
+//     for(let number of splittedNum){
+//         sum += Number(number);
+//     }
+//     return sum;
+// }
 
 // WITHOUT CONVERTING INTO STRING
 function sumOfDigits(num){
@@ -37,5 +35,4 @@ function sumOfDigits(num){
     }
     return sum;
 }
-const result1 = sumOfDigits(123456);
-console.log(result1);
+module.exports = sumOfDigits;

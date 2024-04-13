@@ -16,13 +16,14 @@ Example:
  Note: Ensure the function handles arrays of any length. The average should be returned as a floating-point number.
 */
 function calculateAverage(arr){
+    if (arr.length === 0) {
+        return 0;
+    }
     let sum = 0;
     for(let num of arr){
         sum += num;
-        console.log(sum);
     }
     let average = sum / arr.length;
     return average;
 }
-const result = calculateAverage([5,10,2,8]);
-console.log(result); //Output : 6.25
+module.exports = calculateAverage;

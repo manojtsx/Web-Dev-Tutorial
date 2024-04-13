@@ -40,8 +40,4 @@ function withoutRecursion(n){
         return result;
     }
 }
-const result = factorial(4);
-console.log(result);
-
-const result1 = factorial(4);
-console.log(result1);
+module.exports = {factorial, withoutRecursion}; 
