@@ -12,10 +12,10 @@
     "A-tisket..."
 
     Constraints:
-    The input string str will contain only alphanumeric characters and punctuation marks.
-    The maximum length maxLength will be a positive integer.
-    The output string length should exceed maxLength + 3 characters due to the addition of '...'.
-    If space lies at the end after truncation, then it must have to remove that space.
+    1. The input string str will contain only alphanumeric characters and punctuation marks.
+    2. The maximum length maxLength will be a positive integer.
+    3. The output string length should exceed maxLength + 3 characters due to the addition of '...'.
+    4. If space lies at the end after truncation, then it must have to remove that space.
 */
 function truncateString(str, maxLength){
     if(maxLength < 1){
