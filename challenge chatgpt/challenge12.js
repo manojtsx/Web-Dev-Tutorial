@@ -46,14 +46,69 @@ var SinglyLinkedList = /** @class */ (function () {
             current = current.next;
         }
     };
+    SinglyLinkedList.prototype.insertAtBeginning = function (data) {
+        var newNode = new LinkedListNode(data);
+        newNode.next = this.head;
+        this.head = newNode;
+    };
+    SinglyLinkedList.prototype.insertAtEnd = function (data) {
+        var newNode = new LinkedListNode(data);
+        if (this.head === null) {
+            this.head = newNode;
+        }
+        else {
+            var current = this.head;
+            while (current.next !== null) {
+                current = current.next;
+            }
+            current.next = newNode;
+        }
+    };
+    SinglyLinkedList.prototype.insertAtPosition = function (data, pos) {
+        var newNode = new LinkedListNode(data);
+        if (pos < 1) {
+            console.log("Invalid position");
+        }
+        if (pos === 1 || this.head === null) {
+            console.log("The list is empty. So inserted at first");
+            this.head = newNode;
+            return;
+        }
+        var current = this.head;
+        var index = 1;
+        while (index < pos - 1 && current.next !== null) {
+            current = current.next;
+            index++;
+        }
+        newNode.next = current.next;
+        current.next = newNode;
+    };
     return SinglyLinkedList;
 }());
 var list = new SinglyLinkedList();
-list.display();
+list.display(); // Output: (empty)
+console.log("********");
 list.insert(2);
 list.insert(4);
 list.insert(6);
 list.insert(9);
-list.display();
+list.display(); // Output: 2 4 6 9
+console.log("********");
 list.delete(6);
-list.display();
+list.display(); // Output: 2 4 9
+console.log("********");
+list.insertAtBeginning(1);
+list.display(); // Output: 1 2 4 9
+console.log("********");
+list.insertAtEnd(10);
+list.display(); // Output: 1 2 4 9 10
+console.log("********");
+list.insertAtPosition(5, 3);
+list.display(); // Output: 1 2 5 4 9 10
+console.log("********");
+list.delete(10);
+list.display(); // Output: 1 2 5 4 9
+console.log("********");
+list.delete(1);
+list.display(); // Output: 2 5 4 9
+console.log("********");
