@@ -83,6 +83,52 @@ var SinglyLinkedList = /** @class */ (function () {
         newNode.next = current.next;
         current.next = newNode;
     };
+    SinglyLinkedList.prototype.deleteAtBeginning = function () {
+        if (this.head === null) {
+            console.log("The list is empty");
+            return;
+        }
+        var current = this.head;
+        this.head = current.next;
+    };
+    SinglyLinkedList.prototype.deleteAtEnd = function () {
+        if (this.head === null) {
+            console.log("The list is empty");
+            return;
+        }
+        if (this.head.next === null) {
+            this.head = null;
+            return;
+        }
+        var current = this.head;
+        var previous = null;
+        while (current.next !== null) {
+            previous = current;
+            current = current.next;
+        }
+        if (previous != null) {
+            previous.next = null;
+        }
+    };
+    SinglyLinkedList.prototype.deleteAtPosition = function (pos) {
+        if (this.head === null) {
+            console.log("The list is empty");
+            return;
+        }
+        if (this.head.next === null) {
+            this.head = null;
+            return;
+        }
+        var current = this.head;
+        var index = 1;
+        while (index < pos && current.next !== null) {
+            current = current.next;
+            index++;
+        }
+        if (current.next !== null) {
+            current.next = current.next.next;
+        }
+    };
     return SinglyLinkedList;
 }());
 var list = new SinglyLinkedList();
@@ -104,11 +150,23 @@ list.insertAtEnd(10);
 list.display(); // Output: 1 2 4 9 10
 console.log("********");
 list.insertAtPosition(5, 3);
-list.display(); // Output: 1 2 5 4 9 10
+list.display(); // Output: 1 2 5 4 9 10 
 console.log("********");
 list.delete(10);
 list.display(); // Output: 1 2 5 4 9
 console.log("********");
 list.delete(1);
 list.display(); // Output: 2 5 4 9
+console.log("********");
+list.deleteAtBeginning();
+list.display(); // Output: 5 4 9
+console.log("********");
+list.deleteAtEnd();
+list.display(); // Output: 5 4
+console.log("********");
+list.deleteAtPosition(2);
+list.display(); // Output: 5
+console.log("********");
+list.deleteAtPosition(1);
+list.display(); // Output: (empty)
 console.log("********");

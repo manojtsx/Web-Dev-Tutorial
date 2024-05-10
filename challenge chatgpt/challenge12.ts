@@ -86,6 +86,52 @@ class SinglyLinkedList<T>{
             newNode.next = current.next;
             current.next = newNode;
     }
+    deleteAtBeginning() : void{
+        if(this.head === null){
+            console.log("The list is empty");
+            return;
+        }
+        let current = this.head;
+        this.head = current.next;
+    }
+    deleteAtEnd() : void{
+        if(this.head === null){
+            console.log("The list is empty");
+            return;
+        }
+        if(this.head.next === null){
+            this.head = null;
+            return;
+        }
+        let current = this.head;
+        let previous : LinkedListNode<T> | null = null;
+        while(current.next !== null){
+            previous = current;
+            current = current.next;
+        }
+        if(previous != null){
+            previous.next = null;
+        }
+    }
+    deleteAtPosition(pos : number) : void{
+        if(this.head === null){
+            console.log("The list is empty");
+            return;
+        }
+        if(this.head.next === null){
+            this.head = null;
+            return;
+        }
+        let current = this.head;
+        let index = 1;
+        while(index < pos && current.next !== null){
+            current = current.next;
+            index++;
+        }
+        if(current.next !== null){
+            current.next = current.next.next;
+        }
+    }
 }   
 
 var list = new SinglyLinkedList<number>();
@@ -114,5 +160,17 @@ list.display(); // Output: 1 2 5 4 9
 console.log("********");
 list.delete(1);
 list.display(); // Output: 2 5 4 9
+console.log("********");
+list.deleteAtBeginning();
+list.display(); // Output: 5 4 9
+console.log("********");
+list.deleteAtEnd();
+list.display(); // Output: 5 4
+console.log("********");
+list.deleteAtPosition(2);
+list.display(); // Output: 5
+console.log("********");
+list.deleteAtPosition(1);
+list.display(); // Output: (empty)
 console.log("********");
 
