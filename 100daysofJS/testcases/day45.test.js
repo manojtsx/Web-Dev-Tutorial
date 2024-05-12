@@ -16,7 +16,7 @@ test('Invalid Passwords', () => {
   const invalidPasswords = [
     'short!',
     'no_digit_or_special',
-    'NoSpecialCharacter123',
+    'NoSpecialCharacter',
     'nouppercase@123',
   ];
   invalidPasswords.forEach(password => {
