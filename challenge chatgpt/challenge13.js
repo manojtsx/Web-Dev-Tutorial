@@ -120,21 +120,90 @@ var DoublyLinkedList = /** @class */ (function () {
             }
         }
     };
+    // Delete at beginning
+    DoublyLinkedList.prototype.deleteAtBeginning = function () {
+        if (this.head === null) {
+            console.log("Nothing to delete in list.");
+            return;
+        }
+        this.head = this.head.next;
+        if (this.head !== null) {
+            this.head.prev = null;
+        }
+    };
+    // Delete at End
+    DoublyLinkedList.prototype.deleteAtEnd = function () {
+        if (this.head == null) {
+            console.log("Nothing to delete in list");
+            return;
+        }
+        this.tail = this.tail.prev;
+        if (this.tail !== null) {
+            this.tail.next = null;
+        }
+        else {
+            this.head = null;
+        }
+    };
+    // Delete At position
+    DoublyLinkedList.prototype.deleteAtPosition = function (pos) {
+        if (this.head === null) {
+            console.log("Nothing to delete in list");
+            return;
+        }
+        var current = this.head;
+        var i = 1;
+        while (i < pos && current.next !== null) {
+            current = current.next;
+            i++;
+        }
+        if (i < pos) {
+            console.log("position out of range");
+            return;
+        }
+        if (current.prev != null) {
+            current.prev.next = current.next;
+        }
+        else {
+            this.head = current.next;
+        }
+        if (current.next !== null) {
+            current.next.prev = current.prev;
+        }
+        else {
+            this.tail = current.prev;
+        }
+    };
     return DoublyLinkedList;
 }());
-var list = new DoublyLinkedList();
-list.insert(1);
-list.insert(2);
-list.insert(3);
-list.display(); // Output: 1 2 3
-list.delete(2);
-list.display(); // Output: 1 3
-list.insertAtBeginning(0);
-list.display(); // Output: 0 1 3
-list.insertAtEnd(4);
-list.display(); // Output: 0 1 3 4
-list.insertAtPosition(2, 2);
-list.display(); // Output: 0 1 2 3 4
-list.insertAtPosition(5, 5);
-list.display(); // Output: 0 1 2 3 4 5
-list.insertAtPosition(6, 7); // Output: Position out of range
+var list1 = new DoublyLinkedList();
+console.log('Insertion Operation');
+list1.insert(1);
+list1.insert(2);
+list1.insert(3);
+list1.display(); // Output: 1 2 3
+list1.delete(2);
+list1.display(); // Output: 1 3
+list1.insertAtBeginning(0);
+list1.display(); // Output: 0 1 3
+list1.insertAtEnd(4);
+list1.display(); // Output: 0 1 3 4
+list1.insertAtPosition(2, 2);
+list1.display(); // Output: 0 1 2 3 4
+list1.insertAtPosition(5, 5);
+list1.display(); // Output: 0 1 2 3 4 5
+list1.insertAtPosition(6, 7); // Output: Position out of range
+console.log('Deletion Operation');
+list1.deleteAtBeginning();
+list1.display(); // Output: 1 2 3 4 5
+list1.deleteAtEnd();
+list1.display(); // Output: 1 2 3 4
+list1.deleteAtPosition(2);
+list1.display(); // Output: 1 3 4
+list1.deleteAtPosition(1);
+list1.display(); // Output: 3 4
+list1.deleteAtPosition(2);
+list1.display(); // Output: 3
+list1.deleteAtPosition(1);
+list1.display(); // Output: Nothing to display in list
+list1.deleteAtPosition(1); // Output: Nothing to delete in list
