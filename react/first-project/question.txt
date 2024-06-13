@@ -1,0 +1,3 @@
+Q1. Create an array which contains integers randomly selected from 1 to 100. 
+ make a component to display those numbers that are greater than 20. 
+ [Hint : Use filter and map method of array]
