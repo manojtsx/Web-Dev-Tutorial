@@ -9,7 +9,7 @@ import CSSModule from "./components/CSSModule";
 function App() {
   return (
     <React.Fragment>
-      <CSSModule />
+      <ArrayMap />
     </React.Fragment>
   );
 }
