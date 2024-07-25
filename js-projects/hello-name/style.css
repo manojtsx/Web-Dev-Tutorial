@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    font-size: 30px;
+}
+span{
+    color: red;
+}
+button{
+    background-color: red;
+    border: none;
+    padding: 3px 6px;
+    color: white;
+}   

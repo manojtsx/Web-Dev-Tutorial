@@ -1,8 +1,16 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import './App.css'; // Import CSS file
 
 function App() {
+  // Existing code remains unchanged
   const [todos, setTodos] = useState([]);
-  const [todo, setTodo] = useState(null);
+  useEffect(() => {
+    const TODOS = JSON.parse(localStorage.getItem("todo"));
+    if (TODOS !== null) {
+      setTodos(TODOS);
+    }
+  }, []);
+  const [todo, setTodo] = useState("");
 
   //method for handling input changes
   const handleChange = (e) => {
@@ -11,8 +19,10 @@ function App() {
 
   // method for adding todo
   const handleSubmit = () => {
-    setTodos([...todos, todo]);
+    const newTodos = [...todos, todo];
+    setTodos(newTodos);
     setTodo("");
+    localStorage.setItem("todo", JSON.stringify(newTodos));
   };
 
   // method for deleting todo
@@ -21,11 +31,12 @@ function App() {
       return index !== id;
     });
     setTodos(filteredArray);
+    localStorage.setItem("todo", JSON.stringify(filteredArray));
   };
 
   //method for editing todo
   const editTodo = (id) => {
-    const filteredTodo = todos.filter((item,index)=>{
+    const filteredTodo = todos.filter((item, index) => {
       return index === id;
     });
     setTodo(filteredTodo);
@@ -33,21 +44,23 @@ function App() {
   };
   return (
     <>
-      <div>
-        <input type="text" onChange={handleChange} value={todo} />
-        <button onClick={handleSubmit}>Add</button>
+      <div className="app-container">
+        <div className="todo-input">
+          <input type="text" onChange={handleChange} value={todo} />
+          <button onClick={handleSubmit}>Add</button>
+        </div>
+        {todos.map((item, index) => {
+          return (
+            <ul key={index} className="todo-item">
+              <li>
+                <span>{item}</span>
+                <button onClick={() => editTodo(index)} className="todo-button">Edit</button>
+                <button onClick={() => handleDelete(index)} className="todo-button">Delete</button>
+              </li>
+            </ul>
+          );
+        })}
       </div>
-      {todos.map((item, index) => {
-        return (
-          <ul key={index}>
-            <li>
-              <span>{item}</span>
-              <button onClick={() => editTodo(index)}>Edit</button>
-              <button onClick={() => handleDelete(index)}>Delete</button>
-            </li>
-          </ul>
-        );
-      })}
     </>
   );
 }

@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+body{
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.fa-power-off{
+    position: absolute;
+    right: 60px;
+    top: 20px;
+    padding: 4px;
+    font-size: 25px;
+    background-color: white;
+    border-radius: 100%;
+}
+.wire{
+    background-color: rgb(73, 73, 73);
+    height: 300px;
+    width: 5px;
+}
+.fa-lightbulb{
+    color: white;
+    font-size: 50px;
+    transform: rotate(180deg);
+    margin-bottom: 350px;
+    margin-left: -22px;
+    color: grey;
+}
